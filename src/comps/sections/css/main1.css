@@ -2,4 +2,16 @@
 .main1-cont0{
   display: flex;
   justify-content: center;
+  margin-top: 50px;
+}
+
+.main1-cont0 .centreur{
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.main1-cont0 p{
+  font-size: 12px;
+  color: var(--greytexte);
 }

@@ -9,9 +9,10 @@ export type Toffers = {
 //////////////////////////////////////////////////////niveau1
 
 export type Toffer = {
-  id: string, 
+  _id: string, 
   product_name: string,
   product_description: string,
+  product_price:number,
   product_details: Tproduct_detail[],
   product_pictures: Timage[],
   owner: Towner,
