@@ -1,0 +1,14 @@
+
+:root{
+  --green: #2BAEB7;
+  --greyclair: #F5F6F7;
+}
+
+img {
+  object-fit: cover;
+}
+
+.centreur {
+  width: 1280px;
+}
+
