@@ -34,6 +34,7 @@
   background-color: var(--green);
   color: white;
   border-radius: 5px;
+  border-style: none;
 }
 
 .header2-cont1 p{
