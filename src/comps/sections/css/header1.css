@@ -39,3 +39,10 @@
   border-radius: 5px;
   padding: 0 10px;
 }
+
+.header1-cont2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}

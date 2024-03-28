@@ -3,8 +3,8 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-d
 import Offer from "./comps/pages/offer";
 import Home from "./comps/pages/home";
 import Header1 from "./comps/sections/header1";
-import Login from "./comps/sections/login";
-import Signup from "./comps/sections/signup";
+import Login from "./comps/pages/login";
+import Signup from "./comps/pages/signup";
 import { useStoreBool } from "./stores/storeBool";
 
 

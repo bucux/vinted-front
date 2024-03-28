@@ -6,15 +6,15 @@ import Header2 from '../sections/header2'
 import Main1 from '../sections/main1'
 import { useEffect } from "react";
 import { useStoreOffers } from '../../stores/storeOffers';
-import { fetchAxios } from '../../libs/axios';
+import { getAxios } from '../../libs/axios';
 
 export default function Home() {
 
   const setOffers = useStoreOffers(state => state.setOffers)
   
   const fetchOffers = async () => {
-    const url = import.meta.env.VITE_urlVintedReacteur + 'offers'
-    const data = await fetchAxios(url)
+    const suffixe = 'offers'
+    const data = await getAxios(suffixe)
     if(data){ setOffers(data)}
   }
   
