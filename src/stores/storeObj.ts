@@ -2,9 +2,10 @@
 
 import { create } from 'zustand';
 import { immer } from 'zustand/middleware/immer';
+import { Toffer } from '../libs/types';
 
 type tObjStates = {
-  monObj1: { id: string; name: string };
+  offer: Toffer | null; // offre en cours de consultation
   monObj2: { nom: string; age: number };
 };
 
@@ -13,7 +14,7 @@ type tObjFuncs = {
 };
 
 const etatOrigine: tObjStates = {
-  monObj1: { id: 'abcde', name: 'emmanuel' },
+  offer: null,
   monObj2: { nom: 'macron', age: 48 },
 };
 

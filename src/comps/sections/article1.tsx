@@ -4,14 +4,17 @@ import { useEffect, useState } from 'react'
 import { Toffer } from '../../libs/types'
 import './css/article1.css'
 import { useNavigate } from 'react-router-dom'
+import { useStoreStr } from '../../stores/storeStr'
 
 export default function Article1({offer} : {offer : Toffer}) {
 
   const navigate = useNavigate()
   const [taille, setTaille] = useState('')
   const [marque, setMarque] = useState('')
+  const setStr = useStoreStr(state=>state.setStr)
 
   const clicOffer = () => {
+    setStr('idOffer', offer._id)
     navigate('/offer')
   }
 
@@ -30,7 +33,7 @@ export default function Article1({offer} : {offer : Toffer}) {
       </div>
       <img src={offer.product_image?.secure_url} alt="offer photo" />
       <div className='article1-cont2'>
-        <p>{offer.product_price + " €"}</p>
+        <p>{offer.product_price.toFixed(2) + " €"}</p>
         <p>{taille}</p>
         <p>{marque}</p>
       </div>

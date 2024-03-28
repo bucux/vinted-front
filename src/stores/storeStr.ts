@@ -3,7 +3,7 @@
 import { create } from 'zustand'
 
 type tStrStates = { // ce type ne sert qu'ici, et n'a pas besoin d'être exporté
-  str1: string
+  idOffer: string // id de l'offre en cours de consultation
   str2: string
 }
 
@@ -12,7 +12,7 @@ type tStrFuncs = { // ce type ne sert qu'ici, et n'a pas besoin d'être exporté
 }
 
 const etatOrigine: tStrStates = {
-  str1: "",
+  idOffer: "",
   str2: "",
 }
 
