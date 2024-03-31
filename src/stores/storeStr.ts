@@ -5,6 +5,7 @@ import { create } from 'zustand'
 type tStrStates = { // ce type ne sert qu'ici, et n'a pas besoin d'être exporté
   idOffer: string // id de l'offre en cours de consultation
   token: string // token de connexion
+  searchString: string
 }
 
 type tStrFuncs = { // ce type ne sert qu'ici, et n'a pas besoin d'être exporté
@@ -14,6 +15,7 @@ type tStrFuncs = { // ce type ne sert qu'ici, et n'a pas besoin d'être exporté
 const etatOrigine: tStrStates = {
   idOffer: "",
   token: "",
+  searchString: "",
 }
 
 export const useStoreStr = create<tStrStates & tStrFuncs>((set) => ({

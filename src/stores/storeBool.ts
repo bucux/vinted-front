@@ -1,10 +1,11 @@
 
 import { create } from 'zustand'
 
-type tBoolStates = { // ce type ne sert qu'ici, et n'a pas besoin d'être exporté
+export type tBoolStates = { // ce type sert à l'extérieur, pour vérifier si le nom de la variable est une clé de cet objet
   isLoginOpened: boolean;
   isSignupOpened: boolean;
-  isSearch: boolean
+  isSearch: boolean,
+  isSort: boolean,
 }
 
 type tBoolFuncs = {
@@ -16,6 +17,7 @@ const etatOrigine: tBoolStates = {
   isLoginOpened: false,
   isSignupOpened: false,
   isSearch: false,
+  isSort: false,
 }
 
 export const useStoreBool = create<tBoolStates & tBoolFuncs>((set) => ({

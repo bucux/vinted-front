@@ -1,6 +1,32 @@
 
-.button1-cont0{
-  display: flex;
-  gap: 10px;
-  align-items: center;
+
+.button1-cont0 {
+  width: 40px;
+  height: 20px;
+  border-radius: 15px;
+  cursor: pointer;
+  position: relative;
+  border: solid 1px var(--green);
+  transition: background-color 0.5s ease;
+}
+
+.button1-cont1 {
+  position: absolute;
+  top: 3px;
+  bottom: 5px;
+  left: 3px;
+  width: 14px;
+  height: 14px;
+  background-color: var(--green);
+  border-radius: 90%;
+  transition: transform 0.1s ease, background-color 0.5s ease;
+}
+
+.button1-cont0.on {
+  background-color: var(--green);
+}
+
+.button1-cont1.on {
+  transform: translateX(20px);
+  background-color: white;
 }

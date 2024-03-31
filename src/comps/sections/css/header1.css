@@ -3,7 +3,7 @@
 .header1-cont0{
   display: flex;
   justify-content: center;
-  height: 120px;
+  height: 160px;
 }
 
 .header1-cont0 .centreur{
@@ -23,6 +23,7 @@
 .header1-cont11{
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .header1-cont0 img{
@@ -48,5 +49,9 @@
 }
 
 .header1-cont1.hidden {
+  visibility: hidden;
+}
+
+.header1-cont111.hidden {
   visibility: hidden;
 }

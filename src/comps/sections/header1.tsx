@@ -9,6 +9,7 @@ import Button2 from '../buttons/button2';
 import Slider1 from '../sliders/slider1';
 import './css/header1.css'
 import { useNavigate } from "react-router-dom";
+import { useStoreNum } from '../../stores/storeNum';
 
 export default function Header1() {
 
@@ -16,6 +17,7 @@ export default function Header1() {
   const setStr = useStoreStr(state=>state.setStr)
   const token = useStoreStr(state=>state.token)
   const isSearch = useStoreBool(state=>state.isSearch)
+  const priceMAx = useStoreNum(state=>state.priceMax)
 
   const navigate = useNavigate()
 
@@ -29,6 +31,8 @@ export default function Header1() {
 
   const clicPublish = () => { navigate('/publish') }
 
+  const changeString = (e : React.ChangeEvent<HTMLInputElement>) => { setStr('searchString', e.target.value)}
+
   useEffect(()=>{
     console.log(isSearch)
   }, [isSearch])
@@ -38,10 +42,14 @@ export default function Header1() {
       <div className='centreur'>
         <img src="https://lereacteur-vinted.netlify.app/static/media/logo.10b0caad793dd0a8ea72.png" alt="Logo Vinted" onClick={clicLogo}/>
         <div className={`header1-cont1 ${isSearch ? '' : 'hidden'}`} >
-          <input type="text" placeholder='Recherche des articles'/>
+          <input type="text" placeholder='Recherche des articles' onChange={changeString}/>
           <div className='header1-cont11'>
-            <Button1/>
-            <Slider1/>
+            <p>Trier par prix :</p>
+            <Button1 nom = 'isSort'/>
+            <p>Prix entre :</p>
+            <div>
+              <Slider1 min={0} max={priceMAx}/>
+            </div>
           </div>
         </div>
         {!token

@@ -3,8 +3,8 @@
 import { create } from 'zustand'
 
 type tNumStates = { // ce type ne sert qu'ici, et n'a pas besoin d'être exporté
-  num1: number;
-  num2: number;
+  priceMin: number;
+  priceMax: number;
 }
 
 type tNumFuncs = {
@@ -13,8 +13,8 @@ type tNumFuncs = {
 }
 
 const etatOrigine: tNumStates = {
-  num1: 0,
-  num2: 0,
+  priceMin: 0,
+  priceMax: 1000,
 }
 
 export const useStoreNum = create<tNumStates & tNumFuncs>((set) => ({
