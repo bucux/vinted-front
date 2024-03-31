@@ -1,10 +1,16 @@
 
 
 import axios from "axios";
+import { Gstr } from "./global";
 
 export const getAxios = async(suffixe : string) => {
   try{
-    const datas = await axios.get(import.meta.env.VITE_urlVintedReacteur + suffixe)
+    const datas = await axios.get(
+      import.meta.env.VITE_urlVintedReacteur + suffixe,
+      {
+        headers: {'Authorization': `Bearer ${Gstr.token}`}
+      }
+    )
     return datas.data
   }catch(error: unknown){
     if (error instanceof Error) {
@@ -18,7 +24,13 @@ export const getAxios = async(suffixe : string) => {
 
 export const postAxios = async(suffixe : string, body: {[key: string] : string | undefined}) => {
   try{
-    const datas = await axios.post(import.meta.env.VITE_urlVintedReacteur + suffixe, body)
+    const datas = await axios.post(
+      import.meta.env.VITE_urlVintedReacteur + suffixe, 
+      body,
+      {
+        headers: { 'Authorization': `Bearer ${Gstr.token}`}
+      }
+    )
     return datas.data
   }catch(error: unknown){
     if (error instanceof Error) {

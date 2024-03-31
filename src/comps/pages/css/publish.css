@@ -1,0 +1,110 @@
+
+
+.publish-cont0{
+  background-color: var(--greyclair);
+  display: flex;
+  padding-top: 30px;
+  justify-content: center;
+}
+
+.publish-cont00 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.publish-cont0 .centreur {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.publish-cont0 .centreur > p {
+  font-size: 25px;
+  margin: 10px 0;
+}
+
+.publish-cont0 .centreur > button {
+  margin: 30px 0 50px 0;
+  align-self: flex-end;
+  background-color: var(--green);
+  color: white;
+  border-radius: 5px;
+  border-style: none;
+  padding: 10px;
+  box-sizing: content-box;
+  font-size: 16px;
+  margin-bottom: 5%px;
+}
+
+.publish-cont00 > div{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: white;
+  border-style: solid;
+  border-color: var(--greytexte);
+  border-width: 1px;
+  border-radius: 2px;
+  padding: 0 10px;
+}
+
+.publish-cont00 > div > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.publish-cont00 > div > div:not(:last-child) {
+  border-bottom: solid 1px var(--greytraitclair);
+}
+
+.publish-cont00 > div > div > p {
+  height: 70px;
+}
+
+.publish-cont00 > div > div > input {
+  height: 30px;
+  border-style: none;
+  border-bottom: solid 1px var(--greytraitclair);
+}
+
+.publish-cont00 > div > div > p, input {
+  display: flex;
+  align-items: center;
+  width: 50%;
+}
+
+.publish-cont0 .publish-cont00 .publish-cont1 {
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.publish-cont0 .publish-cont00 .publish-cont1 .publish-cont11 {
+  border: dotted 1px var(--greytraitclair);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.publish-cont11 button {
+  background-color: white;
+  border: solid 1px var(--green);
+  color: var(--green);
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: 600;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin: 0;;
+}
+
+.publish-cont11 button strong {
+  font-size: 50px;
+}

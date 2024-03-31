@@ -2,6 +2,7 @@
 :root{
   --green: #2BAEB7;
   --greyclair: #F5F6F7;
+  --greytraitclair: rgb(207, 207, 207);
   --greytexte: rgb(160, 160, 160);
   --greytextefonce: rgb(100, 100, 100);
 }

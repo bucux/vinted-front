@@ -6,7 +6,8 @@ import Header1 from "./comps/sections/header1";
 import Login from "./comps/pages/login";
 import Signup from "./comps/pages/signup";
 import { useStoreBool } from "./stores/storeBool";
-
+import Cookie from "./comps/sections/cookie";
+import Publish from "./comps/pages/publish";
 
 function App() {
   
@@ -16,9 +17,11 @@ function App() {
   return (
     <Router>
       <Header1/>
+      <Cookie/> 
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/offer" element={<Offer />} />
+        <Route path="/publish" element={<Publish />} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
       {isLoginOpened ? <Login/> : null}

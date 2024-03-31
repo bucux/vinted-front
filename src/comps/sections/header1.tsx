@@ -18,14 +18,14 @@ export default function Header1() {
   const navigate = useNavigate()
 
   const clicLogo = () => { navigate('/') }
-
+  
   const clicLogin = () => { setBool('isLoginOpened', true) }
-
+  
   const clicSignup = () => { setBool('isSignupOpened', true) }
-
+  
   const clicLogout = () => { setStr('token', '') }
 
-  const clicSell = () => { }
+  const clicPublish = () => { navigate('/publish') }
 
   return (
     <div className='header1-cont0'>
@@ -47,7 +47,7 @@ export default function Header1() {
           :
           <Button2 name={"Se déconnecter"} func={clicLogout}/>
         }
-        <Button2 name={"Vends tes articles"} isBackgroundGreen={true} func={clicSell}/>
+        <Button2 name={"Vends tes articles"} isBackgroundGreen={true} func={clicPublish}/>
       </div>
     </div>
   )
