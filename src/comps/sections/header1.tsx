@@ -6,10 +6,9 @@ import { useStoreBool } from '../../stores/storeBool';
 import { useStoreStr } from '../../stores/storeStr';
 import Button1 from '../buttons/button1';
 import Button2 from '../buttons/button2';
-import Slider1 from '../sliders/slider1';
 import './css/header1.css'
 import { useNavigate } from "react-router-dom";
-import { useStoreNum } from '../../stores/storeNum';
+import Slider1 from '../sliders/slider1';
 
 export default function Header1() {
 
@@ -17,7 +16,6 @@ export default function Header1() {
   const setStr = useStoreStr(state=>state.setStr)
   const token = useStoreStr(state=>state.token)
   const isSearch = useStoreBool(state=>state.isSearch)
-  const priceMAx = useStoreNum(state=>state.priceMax)
 
   const navigate = useNavigate()
 
@@ -47,8 +45,8 @@ export default function Header1() {
             <p>Trier par prix :</p>
             <Button1 nom = 'isSort'/>
             <p>Prix entre :</p>
-            <div>
-              <Slider1 min={0} max={priceMAx}/>
+            <div className='header1-cont111'>
+              <Slider1 />
             </div>
           </div>
         </div>

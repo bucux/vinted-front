@@ -14,7 +14,7 @@ type tNumFuncs = {
 
 const etatOrigine: tNumStates = {
   priceMin: 0,
-  priceMax: 1000,
+  priceMax: 500,
 }
 
 export const useStoreNum = create<tNumStates & tNumFuncs>((set) => ({

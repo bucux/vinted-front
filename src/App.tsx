@@ -8,6 +8,7 @@ import Signup from "./comps/pages/signup";
 import { useStoreBool } from "./stores/storeBool";
 import Cookie from "./comps/sections/cookie";
 import Publish from "./comps/pages/publish";
+import Test from "./comps/pages/test";
 
 function App() {
   
@@ -22,6 +23,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/offer" element={<Offer />} />
         <Route path="/publish" element={<Publish />} />
+        <Route path="/test" element={<Test />} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
       {isLoginOpened ? <Login/> : null}
