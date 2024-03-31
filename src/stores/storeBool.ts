@@ -4,6 +4,7 @@ import { create } from 'zustand'
 type tBoolStates = { // ce type ne sert qu'ici, et n'a pas besoin d'être exporté
   isLoginOpened: boolean;
   isSignupOpened: boolean;
+  isSearch: boolean
 }
 
 type tBoolFuncs = {
@@ -14,6 +15,7 @@ type tBoolFuncs = {
 const etatOrigine: tBoolStates = {
   isLoginOpened: false,
   isSignupOpened: false,
+  isSearch: false,
 }
 
 export const useStoreBool = create<tBoolStates & tBoolFuncs>((set) => ({

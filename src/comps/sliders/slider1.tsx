@@ -1,8 +1,8 @@
 
 
-import './css/slide1.css'
+import './css/slider1.css'
 
-export default function Slide1() {
+export default function Slider1() {
 
   const change = (event: React.ChangeEvent<HTMLInputElement>) => {
     console.log(event.target.value);

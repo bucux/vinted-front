@@ -46,3 +46,7 @@
   align-items: center;
   gap: 20px;
 }
+
+.header1-cont1.hidden {
+  visibility: hidden;
+}

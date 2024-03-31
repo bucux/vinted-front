@@ -7,10 +7,12 @@ import Main1 from '../sections/main1'
 import { useEffect } from "react";
 import { useStoreOffers } from '../../stores/storeOffers';
 import { getAxios } from '../../libs/axios';
+import { useStoreBool } from '../../stores/storeBool';
 
 export default function Home() {
 
   const setOffers = useStoreOffers(state => state.setOffers)
+  const setBool = useStoreBool(state=>state.setBool)
   
   const fetchOffers = async () => {
     const suffixe = 'offers'
@@ -18,7 +20,15 @@ export default function Home() {
     if(data){ setOffers(data)}
   }
   
-  useEffect(()=>{ fetchOffers() }, []) 
+  useEffect(()=>{ 
+
+    fetchOffers() 
+    setBool('isSearch', true)
+
+    return (()=>{ // cacher la recherche en quittant la page Home
+      setBool('isSearch', false)
+    })
+  }, []) 
 
   return (
     <div className='home-cont0'>

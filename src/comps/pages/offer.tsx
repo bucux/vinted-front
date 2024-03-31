@@ -8,6 +8,7 @@ import { getAxios } from '../../libs/axios';
 import { useStoreObj } from '../../stores/storeObj';
 import { useStoreStr } from '../../stores/storeStr';
 import Article2 from '../sections/article2';
+import Carrousel1 from '../carroussels/carroussel1';
 
 export default function Offer() {
 
@@ -26,7 +27,7 @@ export default function Offer() {
   if(offer){
     return (
       <div className='offer-cont0'>
-        <img src={offer.product_image.secure_url} alt="offer photo" />
+        <Carrousel1 images={offer.product_pictures}/>
         <Article2 offer={offer}/>
       </div>
     )
