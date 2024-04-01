@@ -108,3 +108,9 @@
 .publish-cont11 button strong {
   font-size: 50px;
 }
+
+.publish-cont12 {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}

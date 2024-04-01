@@ -26,7 +26,6 @@ export default function Home() {
     suffixe += searchString ? `title=${searchString}&` : ''
     suffixe += priceMin ? `priceMin=${priceMin}&` : ''
     suffixe += priceMax ? `priceMax=${priceMax}&` : ''
-    console.log(suffixe)
     const data = await getAxios(suffixe)
     if(data){ setOffers(data)}
   }

@@ -1,7 +1,6 @@
 
 
 
-import { useEffect } from 'react';
 import { useStoreBool } from '../../stores/storeBool';
 import { useStoreStr } from '../../stores/storeStr';
 import Button1 from '../buttons/button1';
@@ -9,6 +8,8 @@ import Button2 from '../buttons/button2';
 import './css/header1.css'
 import { useNavigate } from "react-router-dom";
 import Slider1 from '../sliders/slider1';
+import { Gstr } from '../../libs/global';
+import cookie from "js-cookie"
 
 export default function Header1() {
 
@@ -25,15 +26,15 @@ export default function Header1() {
   
   const clicSignup = () => { setBool('isSignupOpened', true) }
   
-  const clicLogout = () => { setStr('token', '') }
+  const clicLogout = () => { 
+    setStr('token', '') // token réactif
+    Gstr.token = '' // token non réactive
+    cookie.remove("token") // supprimer le cookie
+  }
 
   const clicPublish = () => { navigate('/publish') }
 
   const changeString = (e : React.ChangeEvent<HTMLInputElement>) => { setStr('searchString', e.target.value)}
-
-  useEffect(()=>{
-    console.log(isSearch)
-  }, [isSearch])
 
   return (
     <div className='header1-cont0'>
