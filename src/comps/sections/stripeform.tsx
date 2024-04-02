@@ -41,14 +41,14 @@ const Stripeform = ({options} : {options : StripeElementsOptionsMode}) => {
 
   return paymentIsDone 
     ? 
-      <p>Merci pour votre achat</p>
+      <div className='stripeform-cont0'>
+        <p>Merci pour votre achat</p>
+      </div>
     : 
-      <form onSubmit={handleSubmit}>
+      <form className='stripeform-cont1' onSubmit={handleSubmit}>
         <PaymentElement />
         {/* <CardElement /> */}
-        <button type="submit" disabled={!stripe || !elements || isLoading}>
-          Pay
-        </button>
+        <button id='payment-submit' type="submit" disabled={!stripe || !elements || isLoading}>Pay</button>
         {errorMessage && <p>{errorMessage}</p>}
       </form>
 }

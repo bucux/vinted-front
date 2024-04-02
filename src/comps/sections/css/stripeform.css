@@ -1,0 +1,22 @@
+
+
+.stripeform-cont0 {
+  display: flex;
+  justify-content: center;
+}
+
+.stripeform-cont1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+#payment-submit{
+  height: 80px;
+  width: 80px;
+  background-color: var(--green);
+  color: white;
+  border-style: none;
+  border-radius: 20px;
+}
