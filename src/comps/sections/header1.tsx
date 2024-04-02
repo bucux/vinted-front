@@ -39,7 +39,7 @@ export default function Header1() {
   return (
     <div className='header1-cont0'>
       <div className='centreur'>
-        <img src="https://lereacteur-vinted.netlify.app/static/media/logo.10b0caad793dd0a8ea72.png" alt="Logo Vinted" onClick={clicLogo}/>
+        <img src="https://najiwen.be/wp-content/uploads/2019/11/Vinted_logo-768x295.png" alt="Logo Vinted" onClick={clicLogo}/>
         <div className={`header1-cont1 ${isSearch ? '' : 'hidden'}`} >
           <input type="text" placeholder='Recherche des articles' onChange={changeString}/>
           <div className='header1-cont11'>

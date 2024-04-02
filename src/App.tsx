@@ -9,6 +9,7 @@ import { useStoreBool } from "./stores/storeBool";
 import Cookie from "./comps/sections/cookie";
 import Publish from "./comps/pages/publish";
 import Test from "./comps/pages/test";
+import Payment from "./comps/pages/payment";
 
 function App() {
   
@@ -23,6 +24,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/offer" element={<Offer />} />
         <Route path="/publish" element={<Publish />} />
+        <Route path="/payment" element={<Payment />} />
         <Route path="/test" element={<Test />} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>

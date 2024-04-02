@@ -12,17 +12,17 @@ export const getAxios = async(suffixe : string) => {
       }
     )
     return datas.data
-  }catch(error: unknown){
-    if (error instanceof Error) {
-      console.log(error);
+  }catch(error: unknown) {
+    if (axios.isAxiosError(error)) { 
+      console.log(error.response?.data); 
     } else {
-      console.log('Une erreur inattendue est survenue');
+      console.log('Une erreur est survenue', error);
     }
   }
   return null
 }
 
-export const postAxios = async(suffixe : string, body: {[key: string] : string | undefined}) => { // post simple avec un body de keys/values
+export const postAxios = async(suffixe : string, body?: {[key: string] : string | undefined}) => { // post simple avec un body de keys/values // le body est optionnel
   try{
     const datas = await axios.post(
       import.meta.env.VITE_urlVintedReacteur + suffixe, 
@@ -32,11 +32,11 @@ export const postAxios = async(suffixe : string, body: {[key: string] : string |
       }
     )
     return datas.data
-  }catch(error: unknown){
-    if (error instanceof Error) {
-      console.log(error);
+  }catch(error: unknown) {
+    if (axios.isAxiosError(error)) { 
+      console.log(error.response?.data); 
     } else {
-      console.log('Une erreur inattendue est survenue');
+      console.log('Une erreur est survenue', error);
     }
   }
   return null
@@ -44,9 +44,6 @@ export const postAxios = async(suffixe : string, body: {[key: string] : string |
 
 export const formAxios = async(suffixe : string, formData: FormData) => { // post de files avec un formData
   try{
-    for(const pair of formData.entries()) {
-      console.log(`${pair[0]}: ${pair[1]}`);
-    }
     const datas = await axios.post(
       import.meta.env.VITE_urlVintedReacteur + suffixe, 
       formData,

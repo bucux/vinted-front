@@ -1,10 +1,16 @@
 
 
 
+import { useNavigate } from 'react-router-dom'
 import { Toffer } from '../../libs/types'
 import './css/article2.css'
 
 export default function Article2({offer} : {offer : Toffer}) {
+
+  const navigate = useNavigate()
+
+  const clic = () => { navigate('/payment') }
+
   return (
     <div className='article2-cont0'>
       <div className='article2-cont1'>
@@ -24,7 +30,7 @@ export default function Article2({offer} : {offer : Toffer}) {
           <p>{offer.owner.account.username}</p>
         </div>
       </div>
-      <button>Acheter</button>
+      <button onClick={clic}>Acheter</button>
     </div>
   )
 }
